@@ -44,7 +44,7 @@ AddCommand("debugscript",
 )
 
 function Package_Manager.Handler(player,package,task)
-	if not player or not IsValidPlayer(player) then return end
+	if not player == 0 and not IsValidPlayer(player) then return end	
 	if not package or type(package) ~= "string" or not (#package >= 1) then return end
 
 	-- ADMIN CHECK - Change this section of the code if you want to restrict players from using this. Example below.
